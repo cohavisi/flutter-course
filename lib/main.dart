@@ -14,19 +14,21 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.theme(Brightness.light),
       darkTheme: AppTheme.theme(Brightness.dark),
       themeMode: ThemeMode.system,
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        body: Center(
-          child: Column(mainAxisAlignment: .center, children: [
-            Text(
-              'Hello, World!',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      home: Builder(
+        builder: (context) => Scaffold(
+          backgroundColor: context.appColors.primary,
+          body: Center(
+            child: Column(mainAxisAlignment: .center, children: [
+              Text(
+                'Hello, World!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
       ),
     );
